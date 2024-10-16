@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini calender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+    <div class="calender">
+        <div class="right">
+             <p id="date" >31</p>
+             <p id="day">tuesday</p>
+        </div>
+        <div class="left">
+            <p id="month">june</p>
+            <p id="year">2024</p>
+        </div>
+    </div>
+    </div>
+
+    <script>
+       const date=document.getElementById("date");
+       const day=document.getElementById("day");
+       const month=document.getElementById("month");
+       const year=document.getElementById("year");
+
+       const today=new Date();
+       console.log(today);
+
+       const weekand=["Sunday","Monday","Tuesaday","Wednesday","Thrusday","Friday","Saturday"];
+       const months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+
+       date.innerHTML=today.getDate();
+       day.innerHTML=weekand[today.getDay()];
+       month.innerHTML=months[today.getMonth()];
+       year.innerHTML=today.getFullYear();
+
+    </script>
+</body>
+</html>
